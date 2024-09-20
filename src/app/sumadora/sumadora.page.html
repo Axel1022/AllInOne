@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>sumadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Pa' sumar </ion-card-title>
+      <ion-card-content>
+        <ion-item>
+          <ion-input
+            label="Numero 1"
+            [(ngModel)]="num1"
+            [ngModelOptions]="{standalone: true}"
+            labelPlacement="floating"
+            type="number"
+            placeholder="Ingrese un numero"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Numero 2"
+            [(ngModel)]="num2"
+            [ngModelOptions]="{standalone: true}"
+            labelPlacement="floating"
+            type="number"
+            placeholder="Ingrese un numero"
+          ></ion-input>
+        </ion-item>
+        <ion-button (click)="sumar()" expand="block">Sumar</ion-button>
+        <ion-item lines="none">
+          <ion-label> Resultado: {{resultado}} </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

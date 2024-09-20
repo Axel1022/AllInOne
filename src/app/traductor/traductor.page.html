@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Traductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Te lo convierto a LETRAS</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input
+          label="Dígito"
+          [(ngModel)]="digito"
+          [ngModelOptions]="{ standalone: true }"
+          labelPlacement="floating"
+          placeholder="Ingrese un número"
+        ></ion-input>
+      </ion-item>
+      <ion-button (click)="traducir()" expand="block">Traducir</ion-button>
+      <ion-item lines="none">
+        <ion-label>Resultado: {{ resultado }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

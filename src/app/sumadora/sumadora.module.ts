@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FolderPageRoutingModule } from './folder-routing.module';
+import { SumadoraPageRoutingModule } from './sumadora-routing.module';
 
-import { FolderPage } from './folder.page';
+import { SumadoraPage } from './sumadora.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule
+    SumadoraPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [SumadoraPage]
 })
-export class FolderPageModule {}
+export class SumadoraPageModule {}
